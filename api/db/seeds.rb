@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+10.times do |n|
+  name = Faker::Games::SuperMario.character
+  title = Faker::Book.title
+  content = Faker::Movies::BackToTheFuture.quote
+
+
+  react = React.create!(
+    name: name,
+    title: title,
+    content: content
+  )
+
+  puts "\"#{react.name}\" 作成されました！！"
+end
